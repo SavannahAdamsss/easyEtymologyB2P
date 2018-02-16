@@ -1,1 +1,69 @@
+materialize.min.css
 
+/* @import "node_modules/bootstrap/scss/bootstrap"; */
+
+body {
+    line-height: 1.7em;
+    font-size: 13px;
+}
+
+h3 {
+    color: white;
+}
+
+.splash-container {
+    background: #029DDC;
+    color: white;
+    /* z-index: 1;
+    overflow: hidden; */
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    position: fixed !important;
+}
+
+.splash {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 4em;
+    margin: .67em 0;
+}
+
+/* .pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+} */
+
+input.pure-input-rounded {
+    border-radius: 2em;
+    padding: .5em 1em;
+    width: 40%;
+}
+
+.pure-button {
+    background-color: #029DDC;
+    color: white;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 100%;
+    border: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
