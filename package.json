@@ -1,0 +1,22 @@
+{
+  "name": "easyetymologyb2p",
+  "version": "1.0.0",
+  "description": "A basic website where one can search any English word and return the etymology of that word by calling the data from the Wordnik API.",
+  "main": "materialize.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SavannahAdamsss/easyEtymologyB2P.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SavannahAdamsss/easyEtymologyB2P/issues"
+  },
+  "homepage": "https://github.com/SavannahAdamsss/easyEtymologyB2P#readme",
+  "dependencies": {
+    "xml-js": "^1.6.2"
+  }
+}

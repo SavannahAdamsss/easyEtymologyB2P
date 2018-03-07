@@ -9,25 +9,22 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link href="materialize.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <!-- <link rel="icon" type="image/png" href="images/favicon.ico"> -->
   </head>
   <body class="text-center">
       <!-- <div class="cover-container d-flex h-100 p-3 mx-auto flex-column"></div> -->
-      <header></header>
+      <!-- <header></header> -->
       <main>
         <div class="splash-container">
-          <!-- <div class="splash-a">
+          <div class="splash-a">
             <h1>Easy Etymology</h1>
-          </div> -->
+          </div>
           <div class="splash">
-            <h1>
-              <img class="pure-img-responsive" alt="Easy Etymology">
-            </h1>
             <p class="splash-subhead">
-              Find the Origin of a Word
+              Find the Origin of a Word.
             </p>
             <form class="pure-form">
-              <input type="text" name="wordInput" class="pure-input-rounded" placeholder="Enter a word to trace its origin.">
+              <input type="text" name="wordInput" class="pure-input-rounded" placeholder="Enter a word to trace its origin">
               <button type="submit" class="pure-button">Search</button>
             </form>
             <script src="form.js" charset="utf-8">
@@ -35,22 +32,19 @@
           </div>
         </div>
       </main>
-      <footer class="mastfoot mt-auto">
-        <div class="fixed-bottom">
-          <div class="copy">
-            <p><small>&copy; 2018 All rights reserved. Easy Etymology. Powered by Bootstrap</small></p>
-          </div>
+      <footer>
+        <div class="copy">
+            &copy; 2018 All rights reserved. Easy Etymology. Powered by Bootstrap
         </div>
       </footer>
-    </div>
     <script>
       function load() {
-                fetch("http://api.wordnik.com:80/v4/word.json/word/etymologies?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5")
+                fetch("https://ety-api.now.sh/word/tickle")
                   .then(response => response.json())
                   .then(response => {
                     console.log(response)
-                    // document.querySelector(".card-title").textContent = response.Search[0].Title
-                    // document.querySelector(".card-img-top").src = response.Search[0].Poster
+                    document.querySelector(".card-title").textContent = response.Search[0].Title
+                    document.querySelector(".card-img-top").src = response.Search[0].Poster
                   })
         }
     </script>

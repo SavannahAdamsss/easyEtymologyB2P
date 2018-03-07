@@ -1,12 +1,24 @@
-var convert = require(‘xml-js’)
+const form = document.querySelector('form');
+// let wordInput = "";
 
-fetch('http://developer.wordnik.com/docs.html#!/word/getEtymologies_get_9/word.json/pepper/etymologies');
-    .then(function(response){
-    return convert.xml2json(response);
-    })
-    .then(function(response){
-        console.log(response);
-    })
+form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    // let wordInput = formData.get('wordInput');
+
+    console.log(formData.get('wordInput'));
+    // return wordInput;
+    fetch(`https://ety-api.now.sh/word/${formData.get('wordInput')}`)
+        .then(function(response){
+        return response.json();
+        })
+        .then(function(response){
+            console.log(response);
+        });
+});
+
+
 
 // const url = 'http://api.wordnik.com:80/v4/word.json/word/etymologies?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5';
 
@@ -35,17 +47,6 @@ fetch('http://developer.wordnik.com/docs.html#!/word/getEtymologies_get_9/word.j
 // function load() {
 //     fetch("http://api.wordnik.com:80/v4/word.json/word/etymologies?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5");
 //         .then(response => console.log(response.json));
-// }
-
-// const form = document.querySelector('form');
-
-// form.addEventListener(event) {
-//     event.preventDefault();
-
-//     const formData = new FormData(form);
-//     const wordInput = formData.get('wordInput');
-
-//     console.log(wordInput);
 // }
 
 // const data = {
