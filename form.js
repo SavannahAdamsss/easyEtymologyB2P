@@ -1,20 +1,28 @@
 const form = document.querySelector('form');
-// let wordInput = "";
 
 form.addEventListener('submit', event => {
     event.preventDefault();
 
     const formData = new FormData(form);
-    // let wordInput = formData.get('wordInput');
+        let input = document.getElementById('input');
+            input.value = '';
+            console.log(input);
 
-    console.log(formData.get('wordInput'));
-    // return wordInput;
     fetch(`https://ety-api.now.sh/word/${formData.get('wordInput')}`)
         .then(function(response){
+            
         return response.json();
         })
         .then(function(response){
-            console.log(response);
+            // console.log(response)
+    
+        const resultDiv = document.getElementsByClassName('ety')[0];
+            const title = textContent word 
+            title
+
+
+
+            
         });
 });
 
