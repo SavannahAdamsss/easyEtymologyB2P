@@ -25,8 +25,8 @@ form.addEventListener('submit', event => {
             ety.textContent = response.ety;
             resultEty.appendChild(ety);
 
-            $(document).ready(function(){
-                $('.scrollspy').scrollSpy();
-              });
+            // $(document).ready(function(){
+            //     $('.scrollspy').scrollSpy();
+            //   });
         });
 });
