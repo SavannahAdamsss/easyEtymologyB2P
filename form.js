@@ -15,7 +15,8 @@ form.addEventListener('submit', event => {
         .then(function(response){
             console.log(response);
     
-        const resultWord = document.getElementsByClassName('ety')[0];
+        let resultWord = document.getElementsByClassName('ety')[0];
+            resultWord.innerHTML = null;
             let word = document.createElement('p');
             word.textContent = response.word;
             resultWord.appendChild(word);
@@ -24,9 +25,6 @@ form.addEventListener('submit', event => {
             let ety = document.createElement('p');
             ety.textContent = response.ety;
             resultEty.appendChild(ety);
-
-            // $(document).ready(function(){
-            //     $('.scrollspy').scrollSpy();
-            //   });
+            
         });
 });
