@@ -12,6 +12,10 @@
     <!-- <link rel="icon" type="image/png" href="images/favicon.ico"> -->
   </head>
   <body class="text-center">
+    <!-- <audio controls>
+      <source src="jmh-sounds.surge.sh/pussy_gb_1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> -->
       <!-- <div class="cover-container d-flex h-100 p-3 mx-auto flex-column"></div> -->
       <!-- <header></header> -->
       <main>
@@ -30,7 +34,17 @@
             <script src="form.js" charset="utf-8">
             </script>
           </div>
-          <div class="ety"></div>
+          <div class="ety">
+            <audio auto  id="sound">
+              <source src="http://jmh-sounds.surge.sh/pussy_gb_1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+              <button onclick="document.getElementById('sound').play()">
+                <img src="" alt="">
+              </button>
+              <!-- <img src="speaking-ico.png"> -->
+          </div>
+          </div>
         </div>
       </main>
       <footer>
@@ -41,13 +55,16 @@
     <script>
       function load() {
                 fetch("https://ety-api.now.sh/word/")
+                fetch()
                   .then(response => response.json())
                   .then(response => {
                     console.log(response)
                     document.querySelector(".card-title").textContent = response.Search[0].Title
                     document.querySelector(".card-img-top").src = response.Search[0].Poster
                   })
-        }
+        
+                }
+
     </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
